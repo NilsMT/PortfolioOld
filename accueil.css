@@ -1,0 +1,261 @@
+/*palette*/
+/* font-family: 'Changa One', cursive; */
+/* font-family: 'Paytone One', sans-serif; */
+yeet {
+    color:
+    #009688
+    #00ffe5
+
+    #0C7489
+    #13505B
+
+    #040404
+    #333333
+
+    #e5269c 
+    #b81d7c
+
+    #941764 
+    #5F0F40
+}
+/*--------------------------------*/
+/*--------------------------------*/
+/*principale*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*couleurs*/
+*[orange]:hover {
+    color: #e58c26;
+    text-shadow: #b8681d 2px 2px 1px
+}
+*[orange]{
+    color: #946217;
+    text-decoration: none;
+    text-shadow: #5f3b0f 2px 2px 1px
+}
+*[cyan]:hover {
+    color : #00ffe5;
+    text-shadow: #009688 2px 2px 1px;
+}
+*[cyan] {
+    text-decoration: none;
+    color : #009688;
+    text-shadow: #00433c 2px 2px 1px;
+}
+div{
+    color: white;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.1em;
+    text-shadow: black 2px 2px 1px;
+}
+/*--------------------------------*/
+/*la page*/
+/*--------------------------------*/
+body{
+    background-color: #333333;
+    background-image: url(ressources/images/wllpr.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    margin: 0px;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    "n c o"
+    "m m m";
+}
+/*--------------------------------*/
+/*contenu de la page*/
+/*--------------------------------*/
+.content_page{
+    grid-area: c;
+    overflow-y: scroll;
+}
+.content_side{
+    padding: 24px;
+}
+/*--------------------------------*/
+/*scrollbar*/
+/*--------------------------------*/
+::-webkit-scrollbar { /*taille scrollbar*/
+    width: 20px;
+}
+::-webkit-scrollbar-thumb { /*couleur bouton*/
+    background-color: #009688;
+    border-radius: 10px;
+    border: outset #5c7786 5px;
+}
+::-webkit-scrollbar-thumb:hover { /*couleur bouton*/
+    background-color: #00ffe5;
+    border-radius: 10px;
+}
+/*--------------------------------*/
+/*fleche*/
+/*--------------------------------*/
+.fleche{
+    cursor: default;
+}
+.fleche[gros]{
+    font-size: 3em;
+}
+/*--------------------------------*/
+/*gestion du curseur*/
+/*--------------------------------*/
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+input[type="radio"]{
+    cursor: pointer;
+}
+/*--------------------------------*/
+/*section*/
+/*--------------------------------*/
+.section{
+    height: fit-content;
+    margin-bottom: 32px;
+
+    background-color: #263238;
+    border-radius: 10px;
+    padding: 24px;
+    border: #3f525c outset;
+}
+/*--------------------------------*/
+/*titre section + contenu*/ 
+/*--------------------------------*/
+.titre_section{
+    height: max-content;
+    width: fit-content;
+    text-transform: uppercase;
+    font-family: 'Changa One', cursive;
+    font-size: 2em;
+
+    background-color: #263238;
+    border-radius: 10px;
+    padding: 24px;
+    border: #3f525c outset;
+}
+.morceau_section{
+    height: fit-content;
+    border: #5e7b89 outset;
+    background-color: #3d4f58;
+    border-radius: 10px;
+    padding: 24px;
+}
+/*--------------------------------*/
+/*titre sous section*/
+/*--------------------------------*/
+.titre_sous_section{
+    height: max-content;
+    text-transform: uppercase;
+    font-family: 'Changa One', cursive;
+    font-size: 1.5em;
+
+    background-color: #22272B;
+    border: #424b53 outset;
+    border-radius: 10px;
+
+    padding: 24px;
+    margin:32px 0px;
+}
+/*--------------------------------*/
+/*liste*/
+/*--------------------------------*/
+ul li::before {
+    content: attr(data-icon)
+}
+ul {list-style: none}
+/*--------------------------------*/
+/*--------------------------------*/
+/*navigation*/
+/*--------------------------------*/
+/*--------------------------------*/
+.nav{
+    grid-area: n;
+}
+.ancre, .sous_ancre {
+    width: min-content;
+    text-transform: uppercase;
+}
+.ancre {
+    font-size: 1.2em;
+}
+/*--------------------------------*/
+/*--------------------------------*/
+/*identite*/
+/*--------------------------------*/
+/*--------------------------------*/
+
+/*--------------------------------*/
+/*pour les deux parcours*/
+/*--------------------------------*/
+#parcours_personnel>.fleche, #parcours_scolaire>.fleche{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#parcours_personnel,#parcours_scolaire{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*--------------------------------*/
+/*force et faiblesse*/
+/*--------------------------------*/
+#force_faiblesse{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:32px;
+    text-align: center;
+    height: auto;
+}
+#faiblesse>.morceau_section,#force>.morceau_section{
+    text-align: left;
+    height: auto;
+}
+/*--------------------------------*/
+/*--------------------------------*/
+/*professionelle*/
+/*--------------------------------*/
+/*--------------------------------*/
+
+/*--------------------------------*/
+/*--------------------------------*/
+/*personelle*/
+/*--------------------------------*/
+/*--------------------------------*/
+
+/*--------------------------------*/
+/*--------------------------------*/
+/*options_contacts*/
+/*--------------------------------*/
+/*--------------------------------*/
+.options_contacts {
+    grid-area: o;
+}
+.opt a {
+    cursor: default;
+}
+.con {
+    width: fit-content;
+    text-transform: uppercase;
+}
+body:has(#display_hit_all:checked) * {
+    border: black 1px solid;
+}
+body:has(#display_hit_main:checked)>* {
+    border: black 1px solid;
+}
+/*--------------------------------*/
+/*--------------------------------*/
+/*mention*/
+/*--------------------------------*/
+/*--------------------------------*/
+.mention {
+    font-family: monospace;
+    grid-area: m;
+    background-color: #263238;
+    border: #3f525c outset;
+}
