@@ -42,7 +42,7 @@ yeet {
     color : #009688;
     text-shadow: #00433c 2px 2px 1px;
 }
-div{
+div {
     color: white;
     font-family: 'Paytone One', sans-serif;
     font-size: 1.1em;
@@ -187,7 +187,12 @@ ul {list-style: none}
 /*identite*/
 /*--------------------------------*/
 /*--------------------------------*/
-
+#linked {
+    color: white;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.1em;
+    text-shadow: black 2px 2px 1px;
+}
 /*--------------------------------*/
 /*pour les deux parcours*/
 /*--------------------------------*/
@@ -229,10 +234,10 @@ ul {list-style: none}
 
 /*--------------------------------*/
 /*--------------------------------*/
-/*options_contacts*/
+/*options_dev*/
 /*--------------------------------*/
 /*--------------------------------*/
-.options_contacts {
+.options_dev {
     grid-area: o;
 }
 .opt a {
@@ -254,8 +259,17 @@ body:has(#display_hit_main:checked)>* {
 /*--------------------------------*/
 /*--------------------------------*/
 .mention {
-    font-family: monospace;
     grid-area: m;
     background-color: #263238;
     border: #3f525c outset;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-flow: row;
+}
+.lecopyright {
+    font-family: monospace;
+}
+.github_logo {
+    font-family: monospace;
+    text-align: right;
 }
