@@ -101,6 +101,18 @@ body{
     font-size: 3em;
 }
 /*--------------------------------*/
+/*copyright*/
+/*--------------------------------*/
+#petit {
+    font-size: 0.5em;
+}
+/*--------------------------------*/
+/*image de taille du texte*/
+/*--------------------------------*/
+img[textscaled] {
+    height: 1.1em;
+}
+/*--------------------------------*/
 /*gestion du curseur*/
 /*--------------------------------*/
 a {
@@ -174,6 +186,9 @@ ul {list-style: none}
 /*--------------------------------*/
 .nav{
     grid-area: n;
+    /* fixation */
+    position: fixed;
+    width: 20%;
 }
 .ancre, .sous_ancre {
     width: min-content;
@@ -239,6 +254,11 @@ ul {list-style: none}
 /*--------------------------------*/
 .options_dev {
     grid-area: o;
+
+    /* fixation */
+    position: fixed;
+    width: 20%;
+    margin-left: 80%;
 }
 .opt a {
     cursor: default;
