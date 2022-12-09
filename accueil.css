@@ -199,9 +199,9 @@ ul {list-style: none}
     position: fixed;
     width: 20%;
 }
-.nav *{
+/* .nav *{
     font-size: 1.2vw;
-}
+} */
 .ancre, .sous_ancre {
     width: min-content;
     text-transform: uppercase;
