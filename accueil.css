@@ -60,21 +60,15 @@ body{
 
     margin: 0px;
 
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: 
     "n c o"
-    "m m m";
-}
-/*--------------------------------*/
-/*contenu de la page*/
-/*--------------------------------*/
-.content_page{
-    grid-area: c;
-    overflow-y: scroll;
-}
-.content_side{
-    padding: 24px;
+    "m m m"; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
 }
 /*--------------------------------*/
 /*scrollbar*/
@@ -127,7 +121,7 @@ input[type="radio"]{
 /*--------------------------------*/
 .section{
     height: fit-content;
-    margin-bottom: 32px;
+    margin-bottom:32px;
 
     background-color: #263238;
     border-radius: 10px;
@@ -181,14 +175,32 @@ ul li::before {
 ul {list-style: none}
 /*--------------------------------*/
 /*--------------------------------*/
+/*contenu de la page*/
+/*--------------------------------*/
+/*--------------------------------*/
+.content_page{
+    /* grid-area: c; */
+    overflow-y: scroll;
+
+    width: 60%;
+    margin-left: 20%;
+}
+.content_side{
+    padding: 24px;
+}
+/*--------------------------------*/
+/*--------------------------------*/
 /*navigation*/
 /*--------------------------------*/
 /*--------------------------------*/
 .nav{
-    grid-area: n;
+    /* grid-area: n; */
     /* fixation */
     position: fixed;
     width: 20%;
+}
+.nav *{
+    font-size: 1.2vw;
 }
 .ancre, .sous_ancre {
     width: min-content;
@@ -279,12 +291,12 @@ body:has(#display_hit_main:checked)>* {
 /*--------------------------------*/
 /*--------------------------------*/
 .mention {
-    grid-area: m;
+    /* grid-area: m; */
     background-color: #263238;
     border: #3f525c outset;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-auto-flow: row;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .lecopyright {
     font-family: monospace;
