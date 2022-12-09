@@ -48,6 +48,9 @@ div {
     font-size: 1.1em;
     text-shadow: black 2px 2px 1px;
 }
+* {
+    word-break: break-word
+}
 /*--------------------------------*/
 /*la page*/
 /*--------------------------------*/
@@ -178,6 +181,7 @@ ul {list-style: none}
 /*contenu de la page*/
 /*--------------------------------*/
 /*--------------------------------*/
+
 .content_page{
     /* grid-area: c; */
     overflow-y: scroll;
@@ -198,10 +202,23 @@ ul {list-style: none}
     /* fixation */
     position: fixed;
     width: 20%;
+    display: block;
+    border: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
 }
-/* .nav *{
-    font-size: 1.2vw;
-} */
+#nav_mobile {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 0%;
+
+    height: fit-content;
+    text-transform: uppercase;
+    font-family: 'Changa One', cursive;
+    border: #5e7b89 outset;
+    background-color: #3d4f58;
+    border-radius: 10px;
+}
 .ancre, .sous_ancre {
     width: min-content;
     text-transform: uppercase;
@@ -214,12 +231,6 @@ ul {list-style: none}
 /*identite*/
 /*--------------------------------*/
 /*--------------------------------*/
-#linked {
-    color: white;
-    font-family: 'Paytone One', sans-serif;
-    font-size: 1.1em;
-    text-shadow: black 2px 2px 1px;
-}
 /*--------------------------------*/
 /*pour les deux parcours*/
 /*--------------------------------*/
@@ -247,18 +258,6 @@ ul {list-style: none}
     text-align: left;
     height: auto;
 }
-/*--------------------------------*/
-/*--------------------------------*/
-/*professionelle*/
-/*--------------------------------*/
-/*--------------------------------*/
-
-/*--------------------------------*/
-/*--------------------------------*/
-/*personelle*/
-/*--------------------------------*/
-/*--------------------------------*/
-
 /*--------------------------------*/
 /*--------------------------------*/
 /*options_dev*/
@@ -304,4 +303,92 @@ body:has(#display_hit_main:checked)>* {
 .github_logo {
     font-family: monospace;
     text-align: right;
+}
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*Version mobile et plus*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+@media (max-width: 1340px) {
+    .content_page{
+        margin: 0px;
+        width: 100%;
+    }
+    ::-webkit-scrollbar { /*taille scrollbar*/
+        width: 0px;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0px;
+        padding: 0px;
+    }
+    #nav_mobile {
+        display: block;
+        width: 100%;
+
+        position: fixed;
+        z-index: 1;
+
+        height: fit-content;
+        text-transform: uppercase;
+        font-family: 'Changa One', cursive;
+        border: #5e7b89 outset;
+        background-color: #3d4f58;
+        border-radius: 10px;
+    }
+    .nav {
+        position: relative;
+        width: 100%;
+    }
+    .nav>.content_side>ul{
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 24px;
+    }
+}
+@media (max-width: 800px) {
+    div,a {
+        text-size-adjust:initial;
+        font-size: medium;
+    }
+    .content_page {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    ::-webkit-scrollbar { /*taille scrollbar*/
+        width: 0px;
+    }
+    #force_faiblesse{
+        display: flex;
+        flex-direction: column;
+    }
+    *[orange],*[orange]:hover{
+        color: #946217;
+        text-decoration: none;
+        text-shadow: #5f3b0f 2px 2px 1px
+    }
+    *[cyan],*[cyan]:hover {
+        text-decoration: none;
+        color : #009688;
+        text-shadow: #00433c 2px 2px 1px;
+    }
+    .mention * {
+        font-size: xx-small;
+    }
+    .nav>.content_side>ul{
+        display: flex;
+        flex-direction: column;
+        border: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 10px;
+        padding: 24px;
+    }
 }
