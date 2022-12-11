@@ -49,7 +49,7 @@ div {
     text-shadow: black 2px 2px 1px;
 }
 * {
-    word-break: break-word
+    word-break: break-word;
 }
 /*--------------------------------*/
 /*la page*/
@@ -212,6 +212,8 @@ ul {list-style: none}
     z-index: 1;
     width: 0%;
 
+    text-align: center;
+
     height: fit-content;
     text-transform: uppercase;
     font-family: 'Changa One', cursive;
@@ -230,6 +232,27 @@ ul {list-style: none}
 /*--------------------------------*/
 /*identite*/
 /*--------------------------------*/
+#grid_pres>p {
+    white-space: pre-line;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#grid_pres {
+    display: grid;
+    grid-auto-flow: column;
+}
+#imgcont>img {
+    border-radius: 10px;
+    border: solid white 4px;
+    box-shadow: black 2px 2px 1px;
+
+    height: 9.9em;
+}
+#imgcont {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 /*--------------------------------*/
 /*--------------------------------*/
 /*pour les deux parcours*/
@@ -263,13 +286,17 @@ ul {list-style: none}
 /*options_dev*/
 /*--------------------------------*/
 /*--------------------------------*/
-.options_dev {
+.options_dev[displayed="false"]{
+    display: none;
+}
+.options_dev[displayed="true"] {
     grid-area: o;
 
     /* fixation */
     position: fixed;
     width: 20%;
     margin-left: 80%;
+    display: block;
 }
 .opt a {
     cursor: default;
@@ -346,6 +373,11 @@ body:has(#display_hit_main:checked)>* {
         position: relative;
         width: 100%;
     }
+    .options_dev[displayed]{
+        position: relative;
+        width: 100%;
+        margin: 0px;
+    }
     .nav>.content_side>ul{
         display: flex;
         flex-direction: column;
@@ -354,6 +386,13 @@ body:has(#display_hit_main:checked)>* {
     }
 }
 @media (max-width: 800px) {
+    #grid_pres {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #imgcont{
+        margin: 0px;
+    }
     div,a {
         text-size-adjust:initial;
         font-size: medium;
