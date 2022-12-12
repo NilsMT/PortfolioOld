@@ -24,7 +24,7 @@ yeet {
 /*--------------------------------*/
 /*--------------------------------*/
 /*couleurs*/
-*[orange]:hover {
+body[fake_animation="true"] *[orange]:hover {
     color: #e58c26;
     text-shadow: #b8681d 2px 2px 1px
 }
@@ -33,7 +33,7 @@ yeet {
     text-decoration: none;
     text-shadow: #5f3b0f 2px 2px 1px
 }
-*[cyan]:hover {
+body[fake_animation="true"] *[cyan]:hover {
     color : #00ffe5;
     text-shadow: #009688 2px 2px 1px;
 }
@@ -41,6 +41,14 @@ yeet {
     text-decoration: none;
     color : #009688;
     text-shadow: #00433c 2px 2px 1px;
+}
+a[orange]:hover {
+    color: #e58c26;
+    text-shadow: #b8681d 2px 2px 1px
+}
+a[cyan]:hover {
+    color : #00ffe5;
+    text-shadow: #009688 2px 2px 1px;
 }
 div {
     color: white;
@@ -197,9 +205,25 @@ ul {list-style: none}
 /*navigation*/
 /*--------------------------------*/
 /*--------------------------------*/
+/* .nav {
+    position : fixed;
+
+    border: #5e7b89 outset;
+    background-color: #3d4f58;
+
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+}
+.nav>.content_menu>ul {
+    display: none;
+}
+.nav>.content_menu:hover ul {
+    display: block;
+} */
+
 .nav{
-    /* grid-area: n; */
-    /* fixation */
     position: fixed;
     width: 20%;
     display: block;
