@@ -306,10 +306,10 @@ ul {list-style: none}
     text-transform: uppercase;
 }
 body:has(#display_hit_all:checked) * {
-    border: black 1px solid;
+    border: rgb(255, 0, 166) 1px solid;
 }
 body:has(#display_hit_main:checked)>* {
-    border: black 1px solid;
+    border: rgb(255, 0, 166) 1px solid;
 }
 /*--------------------------------*/
 /*--------------------------------*/
@@ -384,6 +384,16 @@ body:has(#display_hit_main:checked)>* {
         border-radius: 10px;
         padding: 24px;
     }
+    .mention {
+        display: flex;
+        flex-direction: column;
+    }
+    .lecopyright {
+        text-align: left;
+    }
+    .github_logo {
+        text-align: left;
+    }
 }
 @media (max-width: 800px) {
     #grid_pres {
@@ -429,5 +439,15 @@ body:has(#display_hit_main:checked)>* {
         background-color: rgba(0, 0, 0, 0);
         border-radius: 10px;
         padding: 24px;
+    }
+    .mention {
+        display: flex;
+        flex-direction: column;
+    }
+    .lecopyright {
+        text-align: left;
+    }
+    .github_logo {
+        text-align: left;
     }
 }
