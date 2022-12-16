@@ -256,6 +256,7 @@ ul {list-style: none}
 /*--------------------------------*/
 /*identite*/
 /*--------------------------------*/
+/*--------------------------------*/
 #grid_pres>p {
     white-space: pre-line;
     margin-top: auto;
@@ -281,12 +282,13 @@ ul {list-style: none}
 /*--------------------------------*/
 /*pour les deux parcours*/
 /*--------------------------------*/
-#parcours_personnel>.fleche, #parcours_scolaire>.fleche{
+/*--------------------------------*/
+#parcours_personnel_cont>.fleche, #parcours_scolaire_cont>.fleche{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
-#parcours_personnel,#parcours_scolaire{
+#parcours_personnel_cont,#parcours_scolaire_cont{
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -294,7 +296,7 @@ ul {list-style: none}
 /*--------------------------------*/
 /*force et faiblesse*/
 /*--------------------------------*/
-#force_faiblesse{
+#force_et_faiblesse{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap:32px;
@@ -359,7 +361,7 @@ body:has(#display_hit_main:checked)>* {
 /*--------------------------------*/
 /*--------------------------------*/
 /*--------------------------------*/
-/*Version mobile et plus*/
+/*Responsive index*/
 /*--------------------------------*/
 /*--------------------------------*/
 /*--------------------------------*/
@@ -439,7 +441,7 @@ body:has(#display_hit_main:checked)>* {
     ::-webkit-scrollbar { /*taille scrollbar*/
         width: 0px;
     }
-    #force_faiblesse{
+    #force_et_faiblesse{
         display: flex;
         flex-direction: column;
     }
@@ -475,3 +477,34 @@ body:has(#display_hit_main:checked)>* {
         text-align: left;
     }
 }
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*ARCH*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+.archimg {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.archimg_container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-flow: row;
+    gap: 32px;
+}
+.sous_leg {
+    font-size: 0.9em;
+}
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*Responsive arch*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
+/*--------------------------------*/
