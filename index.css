@@ -499,6 +499,14 @@ body:has(#display_hit_main:checked)>* {
 .sous_leg {
     font-size: 0.9em;
 }
+#accueil_retour {
+    display: block;
+
+    text-transform: uppercase;
+    font-family: 'Changa One', cursive;
+    font-size: 2em;
+    text-align: center;
+}
 /*--------------------------------*/
 /*--------------------------------*/
 /*--------------------------------*/
