@@ -58,6 +58,7 @@ div {
 }
 * {
     word-break: break-word;
+    scroll-behavior: smooth;
 }
 /*--------------------------------*/
 /*la page*/
