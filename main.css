@@ -596,3 +596,19 @@ body:has(#display_hit_main:checked)>* {
     font-size: 2em;
     text-align: center;
 }
+iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#rlbx_dead {
+    margin-top: 24px;
+}
+#nobot {
+    padding-bottom: 0px;
+}
+#nobotsk {
+    padding-bottom: 0px;
+    margin-top: 24px;
+}
