@@ -1,20 +1,32 @@
 /*palette*/
 /* font-family: 'Changa One', cursive; */
 /* font-family: 'Paytone One', sans-serif; */
-yeet {
+.yeet {
     color:
+    /*cyan hover*/
     #009688
     #00ffe5
-
-    #0C7489
-    #13505B
-
-    #040404
+    /*cyan*/
+    #009688
+    #00433c
+    /*orange hover*/
+    #e58c26
+    #b8681d
+    /*orange*/
+    #946217
+    #5f3b0f
+    /*morceau section*/
+    #5e7b89
+    #3d4f58
+    /*section*/
+    #263238
+    #3f525c
+    /*body bg*/
     #333333
-
+    /*pink hover*/
     #e5269c 
     #b81d7c
-
+    /*pink*/
     #941764 
     #5F0F40
 }
@@ -154,7 +166,6 @@ input[type="radio"]{
 .section{
     height: fit-content;
     margin-bottom:32px;
-
     background-color: #263238;
     border-radius: 10px;
     padding: 24px;
@@ -206,6 +217,38 @@ ul li::before {
 }
 ul {list-style: none}
 /*--------------------------------*/
+/*faux bouton*/
+/*--------------------------------*/
+.button {
+    width: fit-content;
+    padding: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+
+    border: #5f3b0f outset;
+    background-color: #946217;
+}
+
+.button:hover {
+    border: #e58c26 outset;
+    background-color: #b8681d;
+}
+
+.button>* {
+    color: white;
+    text-shadow: black 2px 2px 1px;
+
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+/*--------------------------------*/
+/*apprentisage langue*/
+/*--------------------------------*/
+#margin_top_skill {
+    margin-top: 24px;
+}
+/*--------------------------------*/
 /*--------------------------------*/
 /*contenu de la page*/
 /*--------------------------------*/
@@ -250,6 +293,11 @@ ul {list-style: none}
     border: rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
 }
+
+#nav>*{
+    text-transform: uppercase;
+}
+
 #nav_mobile {
     display: none;
     position: fixed;
@@ -267,11 +315,24 @@ ul {list-style: none}
 }
 .ancre, .sous_ancre {
     width: min-content;
-    text-transform: uppercase;
 }
+
 .ancre {
     font-size: 1.2em;
 }
+
+/*transitions*/
+
+.sous_ancre,.ancre {
+    transition: margin-left 1s;
+}
+
+.sous_ancre:hover,.ancre:hover {
+    margin-left: 6%;
+    text-align: right;
+}
+
+
 /*--------------------------------*/
 /*--------------------------------*/
 /*identite*/
