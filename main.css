@@ -609,6 +609,12 @@ iframe {
     padding-bottom: 0px;
 }
 #nobotsk {
+    padding-top: 0px;
     padding-bottom: 0px;
     margin-top: 24px;
+}
+
+div[redmarge] {
+    margin-top: 0px;
+    padding-top: 0px;
 }
