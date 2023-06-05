@@ -67,6 +67,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     z-index: 9999;
+    width: 100%;
 }
 .lecopyright {
     font-family: monospace;
@@ -81,14 +82,15 @@ body{
 /*--------------------------------*/
 /*--------------------------------*/
 .main_content{
+    height: 100%;
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5048144257703081) 50%, rgba(0,0,0,1) 100%);
     font-size: 3em;
-    padding-top: 15%;
-    padding-bottom: 22%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    overflow-y: auto;
 }
 .main_panel {
     height: 100%;
@@ -191,6 +193,7 @@ body{
     margin-bottom: auto;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 #game {
     background-color: black;
@@ -207,6 +210,7 @@ body{
     padding: 1%;
 }
 #start, #back {
+    text-shadow: black 2px 2px 1px;
     text-align: center;
 
     color: white;
@@ -214,7 +218,7 @@ body{
     padding: 1%;
 
     background-color: #941764 ;
-    border: #5F0F40 outset 2px;
+    border: #5F0F40 outset 1%;
     border-radius: 10px;
     font-size: 1.1em;
 }
@@ -222,6 +226,10 @@ body{
     background-color: #e5269c ;
     border: #b81d7c outset 2px;
 }
+#start {
+    padding: 5px;
+}
 #back {
+    text-shadow: black 2px 2px 1px;
     width: 100%;
 }

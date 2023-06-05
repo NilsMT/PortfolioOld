@@ -102,15 +102,11 @@ body{
 /*--------------------------------*/
 ::-webkit-scrollbar { /*taille scrollbar*/
     width: 20px;
-
-    z-index: 98;
 }
 ::-webkit-scrollbar-thumb { /*couleur bouton*/
     background-color: #009688;
     border-radius: 10px;
     border: outset #5c7786 5px;
-
-    z-index: 98;
 }
 ::-webkit-scrollbar-thumb:hover { /*couleur bouton*/
     background-color: #00ffe5;
@@ -248,12 +244,6 @@ ul {list-style: none}
     text-align: center;
     justify-self: center;
     align-self: center;
-}
-/*--------------------------------*/
-/*apprentisage langue*/
-/*--------------------------------*/
-#margin_top_skill {
-    margin-top: 24px;
 }
 /*--------------------------------*/
 /*--------------------------------*/
@@ -602,6 +592,6 @@ iframe {
     border-radius: 10px;
 }
 
-#nobotsk {
+*[margintop] {
     margin-top: 24px;
 }
