@@ -193,7 +193,7 @@ body{
     margin-bottom: auto;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    height: auto;
 }
 #game {
     background-color: black;
@@ -204,6 +204,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 24px;
+    align-items: center;
 }
 #score {
     font-size: 1.1em;
@@ -218,18 +219,30 @@ body{
     padding: 1%;
 
     background-color: #941764 ;
-    border: #5F0F40 outset 1%;
+    border: #5F0F40 outset 5px;
     border-radius: 10px;
     font-size: 1.1em;
 }
 #start:hover, #back:hover {
     background-color: #e5269c ;
-    border: #b81d7c outset 2px;
+    border: #b81d7c outset 5px;
 }
 #start {
     padding: 5px;
 }
 #back {
-    text-shadow: black 2px 2px 1px;
-    width: 100%;
+    width: auto;
+}
+#credit {
+    margin-top: 24px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+#credit_link {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #941764;
+}
+#credit_link:hover {
+    color: #e5269c;
 }
