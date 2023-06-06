@@ -198,6 +198,8 @@ body{
 #game {
     background-color: black;
     margin-bottom: 24px;
+    height: max-content;
+    width: max-content;
 }
 #game_interface {
     display: flex;
