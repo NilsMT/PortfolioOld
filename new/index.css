@@ -1,0 +1,178 @@
+/*border debug*/
+* {
+    /* border: solid rgb(130, 255, 144) 1px; */
+}
+/*border debug*/
+* {
+    font-family: 'ADLaM Display', cursive;
+    color: var(--text);
+
+    word-break: break-all;
+}
+
+
+body {
+    background-color: var(--bg);
+    padding: 10px;
+}
+
+/*grille*/
+.menu {
+    width: 40%;
+    aspect-ratio: 1/1;
+
+    display: grid;
+    grid : repeat(6,1fr) / repeat(6,1fr);
+    gap : 5px;
+
+    margin: auto;
+}
+.menu-item {
+    cursor:pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+
+    font-size: 175%;
+}
+
+
+#presentation {
+    grid-area: 1 / 2 / 1 / 5 ;
+
+    background-color: var(--secondary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease,background-color 0.2s ease;
+}
+
+#presentation:hover{
+    background-color: var(--secondarylight);
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px var(--secondarylight);
+}
+#passions{
+    grid-area: 3 / 1 / 5 / 3 ;
+
+    background-color: var(--secondary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease,background-color 0.2s ease;
+}
+
+#passions:hover{
+    background-color: var(--secondarylight);
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px var(--secondarylight);
+}
+#réalisations{
+    grid-area: 2 / 3 / 5 / 5 ;
+
+    background-color: var(--primary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease,background-color 0.2s ease;
+}
+
+#réalisations:hover{
+    background-color: var(--primarylight);
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px var(--primarylight);
+}
+#compétences{
+    grid-area: 2 / 5 / 4 / 7 ;
+
+    background-color: var(--accent);
+    transition: transform 0.2s ease, box-shadow 0.2s ease,background-color 0.2s ease;
+}
+
+#compétences:hover{
+    background-color: var(--accentlight);
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px var(--accentlight);
+}
+#avenir{
+    grid-area: 5 / 2 ;
+
+    background-color: var(--primary);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease,background-color 0.2s ease;
+}
+
+#avenir:hover{
+    background-color: var(--primarylight);
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px var(--primarylight);
+}
+#contact{
+    grid-area: 5 / 3 / 5 / 6 ;
+
+    background-color: var(--secondary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease,background-color 0.2s ease;
+}
+
+#contact:hover{
+    background-color: var(--secondarylight);
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px var(--secondarylight);
+}
+#theme{
+    grid-area: 6 / 3  ;
+
+    background-color: var(--accent);
+    transition: transform 0.2s ease, box-shadow 0.2s ease,background-color 0.2s ease;
+}
+
+#theme:hover{
+    background-color: var(--accentlight);
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px var(--accentlight);
+}
+
+
+@media (max-width: 480px) {
+    .menu {
+      width: 100%; /* Make the grid take up full width */
+    }
+    .menu-item {
+      font-size: 100%; /* Decrease font size for smartphones */
+    }
+}
+/* Media query for smartphones */
+@media (min-width: 480px) {
+    .menu {
+      width: 100%; /* Make the grid take up full width */
+    }
+    .menu-item {
+      font-size: 125%; /* Decrease font size for smartphones */
+    }
+}
+  
+  /* Media query for tablets */
+@media (min-width: 720px) {
+    /* You can adjust these values to target specific tablet sizes */
+    .menu {
+      width: 85%; /* Adjust grid width for tablets */
+    }
+    .menu-item {
+      font-size: 150%; /* Adjust font size for tablets */
+    }
+}
+  
+  /* Media query for larger screens (PCs, laptops, etc.) */
+@media (min-width: 1024px) {
+    .menu {
+      width: 60%; /* Reset grid width for larger screens (PCs) */
+    }
+    .menu-item {
+      font-size: 150%; /* Reset font size for larger screens (PCs) */
+    }
+}
+
+@media (min-width: 1440px) {
+    .menu {
+      width: 40%; /* Reset grid width for larger screens (PCs) */
+    }
+    .menu-item {
+      font-size: 175%; /* Reset font size for larger screens (PCs) */
+    }
+}
