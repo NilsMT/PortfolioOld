@@ -140,7 +140,7 @@
     }
 }
   
-  /* Media query for tablets */
+/* Media query for tablets */
 @media (min-width: 720px) {
     /* You can adjust these values to target specific tablet sizes */
     .menu {
@@ -151,7 +151,7 @@
     }
 }
   
-  /* Media query for larger screens (PCs, laptops, etc.) */
+/* Media query for larger screens (PCs, laptops, etc.) */
 @media (min-width: 1024px) {
     .menu {
       width: 60%; /* Reset grid width for larger screens (PCs) */
