@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link href="../css/index.css" rel="stylesheet"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a0107e3e1b.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <footer id="myfooter"></footer>
+    <script src="../js/color_palette.js"></script>
+    <script src="../js/default.js"></script>
+    <script>
+        const dateActuelle = new Date();
+
+        // Date de naissance de la personne (vous devez entrer la date de naissance complète)
+        const dateDeNaissance = new Date('1990-09-08'); // Remplacez par la date de naissance réelle
+
+        // Calculer la différence entre les deux dates en millisecondes
+        const differenceEnMillisecondes = dateActuelle - dateDeNaissance;
+
+        // Convertir la différence en années en divisant par le nombre de millisecondes par année
+        const millisecondsParAnnee = 1000 * 60 * 60 * 24 * 365.25; // Environ 365.25 jours par an
+        const ageAuJourPres = Math.floor(differenceEnMillisecondes / millisecondsParAnnee);
+    </script>
+</body>
+</html>

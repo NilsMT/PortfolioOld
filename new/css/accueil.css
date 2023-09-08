@@ -1,21 +1,12 @@
-/*border debug*/
-* {
-    /* border: solid rgb(130, 255, 144) 1px; */
+/*menu*/
+#menu_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-/*border debug*/
-* {
-    font-family: 'ADLaM Display', cursive;
-    color: var(--text);
-
-    word-break: break-all;
-}
-
-
-body {
-    background-color: var(--bg);
-    padding: 10px;
-}
-
 /*grille*/
 .menu {
     width: 40%;
@@ -26,6 +17,9 @@ body {
     gap : 5px;
 
     margin: auto;
+
+    position: relative;
+    animation: moveBackground 1s ease forwards;
 }
 .menu-item {
     cursor:pointer;
@@ -48,7 +42,7 @@ body {
     background-color: var(--secondary);
     transition: transform 0.2s ease, box-shadow 0.2s ease,background-color 0.2s ease;
 }
-
+/*animation hover*/
 #presentation:hover{
     background-color: var(--secondarylight);
     transform: translateY(-5px);
@@ -128,7 +122,6 @@ body {
     box-shadow: 0px 0px 20px var(--accentlight);
 }
 
-
 @media (max-width: 480px) {
     .menu {
       width: 100%; /* Make the grid take up full width */
@@ -154,7 +147,7 @@ body {
       width: 85%; /* Adjust grid width for tablets */
     }
     .menu-item {
-      font-size: 150%; /* Adjust font size for tablets */
+        font-size: 150%; /* Reset font size for larger screens (PCs) */
     }
 }
   
@@ -175,4 +168,14 @@ body {
     .menu-item {
       font-size: 175%; /* Reset font size for larger screens (PCs) */
     }
+}
+
+
+@keyframes moveBackground {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0%;
+  }
 }

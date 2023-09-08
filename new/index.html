@@ -1,7 +1,8 @@
 <html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="/fav-icon.png">
-    <link href="index.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="assets//icon.png">
+    <link href="css/index.css" rel="stylesheet"/>
+    <link href="css/accueil.css" rel="stylesheet"/>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,32 +13,35 @@
     <title>Document</title>
 </head>
 <body>
-   
-    <div class="menu">
-        <div class="menu-item" id="presentation">Présentation</div>
-        <div class="menu-item" id="passions">Passions</div>
-        <div class="menu-item" id="réalisations">Réalisations</div>
-        <div class="menu-item" id="compétences">Compétences</div>
-        <div class="menu-item" id="avenir">Avenir</div>
-        <div class="menu-item" id="contact">Contact</div>
-        <div class="menu-item" id="theme">Thème</div>
+    <div id="menu_container">
+        <div class="menu">
+            <a target="_self" href="html/presentation.html" class="menu-item" id="presentation">Présentation</a>
+            <a target="_self" href="html/passions.html" class="menu-item" id="passions">Passions</a>
+            <a target="_self" href="html/realisations.html" class="menu-item" id="réalisations">Réalisations</a>
+            <a target="_self" href="html/competences.html" class="menu-item" id="compétences">Compétences</a>
+            <a target="_self" href="html/avenir.html" class="menu-item" id="avenir">Avenir</a>
+            <a target="_self" href="html/contact.html" class="menu-item" id="contact">Contact</a>
+            <div class="menu-item" id="theme"><i id ="icon" class="fa-solid fa-moon"></i></i></div>
+        </div> 
     </div>
-    <div>
-
-    </div>
-
-    <script src="color_palette.js"></script>
+    <footer id="myfooter"></footer>
+    <script src="js/color_palette.js"></script>
+    <script src="js/default.js"></script>
     <script>
         const menuItems = document.querySelectorAll('.menu-item');
 
         // Create an audio element and set its source to the "hover.wav" file
-        const audio = new Audio('hover.mp3');
-
+        const audio = new Audio('assets/hover.mp3');
+        
         // Add a mouseover event listener to each menu item
         menuItems.forEach(item => {
             item.addEventListener('mouseover', () => {
                 // Play the audio when hovered
                 audio.play();
+            });
+            item.addEventListener('mouseout', () => {
+                // Play the audio when hovered
+                audio.pause();
             });
         });
     </script>
