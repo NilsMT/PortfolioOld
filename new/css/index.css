@@ -11,8 +11,13 @@ e {
 
     text-shadow: 0px 2px var(--texttrans);
     scroll-behavior: smooth;
+
+    text-align: center;
 }
 
+p{
+    text-align: left;
+}
 a,#theme{
     text-decoration: none;
     cursor: pointer;
@@ -79,6 +84,7 @@ body::-webkit-scrollbar {
     justify-content: space-evenly;
     align-items: left;
     row-gap: 10px;
+    column-gap: 30px;
 
     background: rgba(0, 0, 0, 0.193);
 }
@@ -110,38 +116,25 @@ body::-webkit-scrollbar {
 }
 
 
-@media (max-width: 480px) {
-    footer {
-        font-size:50%;
-    }
-    a,p {
-        font-size:50%;
-    }
-}
 /* Media query for smartphones */
-@media (min-width: 480px) {
-    footer {
-        font-size:75%;
+@media (max-width: 480px) {
+    footer,.header-items {
+        font-size:200%;
+        flex-direction: column;
+    }
+    .header-item {
+        width: 100%;
     }
     a,p {
-        font-size:75%;
+        font-size:200%;
     }
 }
   
   /* Media query for tablets */
-@media (min-width: 720px) {
-    footer {
-        font-size:100%;
-    }
-    a,p {
-        font-size:100%;
-    }
-}
-  
-  /* Media query for larger screens (PCs, laptops, etc.) */
-@media (min-width: 1024px) {
-    footer {
+@media (max-width: 720px) {
+    footer,.header-items {
         font-size:150%;
+        flex-direction: row;
     }
     a,p {
         font-size:150%;
@@ -149,8 +142,9 @@ body::-webkit-scrollbar {
 }
 
 @media (min-width: 1440px) {
-    footer {
+    footer,.header-items {
         font-size:150%;
+        flex-direction: row;
     }
     a,p {
         font-size:150%;

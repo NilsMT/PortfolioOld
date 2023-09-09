@@ -17,19 +17,19 @@
 
     gap : 10px;
 
-    padding: 10px;
+    padding: 20px;
 
     height: fit-content;
 }
 
 /*main color*/
-#arch,#port,#fin {
+.grid-item:nth-child(3n+1) {
     background-color: var(--primary);
 }
-#rgb,#atlas {
+.grid-item:nth-child(3n+2) {
     background-color: var(--secondary);
 }
-#ppp,#pastek,#debut {
+.grid-item:nth-child(3n+3) {
     background-color: var(--accent);
 }
 /*button color*/
@@ -80,48 +80,24 @@
     box-shadow: 0px 0px 20px var(--oppbglight);
 }
 
-
-
+/* Media query for smartphones */
 @media (max-width: 480px) {
-    a,p {
-        font-size:50%;
-    }
     .grid {
         display: flex;
         flex-direction: column;
     }
 }
-/* Media query for smartphones */
-@media (min-width: 480px) {
-    a,p {
-        font-size:75%;
-    }
-}
   
   /* Media query for tablets */
-@media (min-width: 720px) {
-    a,p {
-        font-size:100%;
-    }
+@media (max-width: 720px) {
     .grid {
-        width: 90%;
-    }
-}
-  
-  /* Media query for larger screens (PCs, laptops, etc.) */
-@media (min-width: 1024px) {
-    a,p {
-        font-size:150%;
-    }
-    .grid {
+        display: flex;
+        flex-direction: column;
         width: 90%;
     }
 }
 
 @media (min-width: 1440px) {
-    a,p {
-        font-size:150%;
-    }
     .grid {
         width: 70%;
     }
