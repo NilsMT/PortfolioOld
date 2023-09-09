@@ -50,15 +50,15 @@ body::-webkit-scrollbar {
 }
 
 /*mention+menu*/
-
+#header-items,#collapse-header,#myfooter {
+    background : var(--banner);
+}
 /*mention*/
 #myfooter {
     padding: 10px;
     text-align: center;
-    background : rgba(0, 0, 0, 0.193);
     z-index: 100;
 }
-
 /*menu*/
 #myheader {
     position: fixed;
@@ -72,7 +72,6 @@ body::-webkit-scrollbar {
     margin-top: 10px;
     width: fit-content;
     padding: 10px;
-    background : rgba(0, 0, 0, 0.193); 
     border-radius: 0px 20px 20px 0px; 
 }
 
@@ -85,8 +84,6 @@ body::-webkit-scrollbar {
     align-items: left;
     row-gap: 10px;
     column-gap: 30px;
-
-    background: rgba(0, 0, 0, 0.193);
 }
 
 /*page links*/

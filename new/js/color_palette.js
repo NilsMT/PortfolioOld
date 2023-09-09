@@ -85,6 +85,9 @@ function variant() {
   document.body.style.setProperty('--oppbg',invertColor(document.body.style.getPropertyValue('--bg')))
   document.body.style.setProperty('--oppbglight',addHexColors(document.body.style.getPropertyValue('--oppbg'),inc,false))
   document.body.style.setProperty('--oppbgdark',addHexColors(document.body.style.getPropertyValue('--oppbg'),inc,true))
+
+
+  document.body.style.setProperty('--banner',document.body.style.getPropertyValue('--bgdark')+"CC")
 }
 /////////////////////////
 // DEFAULT PALETTE
