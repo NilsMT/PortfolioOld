@@ -2,6 +2,7 @@
 <head>
     <link rel="icon" type="image/x-icon" href="../assets/icon.png">
     <link href="../css/index.css" rel="stylesheet"/>
+    <link href="../css/realisation.css" rel="stylesheet"/>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -9,9 +10,102 @@
     <script src="https://kit.fontawesome.com/a0107e3e1b.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NMT | Réalisations</title>
 </head>
 <body>
+    <header id="myheader">
+        <div id="header-items">
+            <a class="header-item page-link" target="_self" href="../index.html">Accueil</a>
+            <a class="header-item" target="_self" href="#arch">A.R.C.H</a>
+            <a class="header-item" target="_self" href="#rgb">RGB To Grayscale</a>
+            <a class="header-item" target="_self" href="#pastek">Pastek</a>
+            <a class="header-item" target="_self" href="#port">Portfolio</a>
+            <a class="header-item" target="_self" href="#atlas">Atlas</a>
+            <a class="header-item" target="_self" href="#ppp">PPP</a>
+            <a class="header-item" target="_self" id="theme"><i id ="icon" class="fa-solid fa-moon"></i></a>
+        </div>
+        <a class="header-item" id="collapse-header">Menu ▲</a>
+    </header>
+    <div class="content">
+        <div class="grid">
+            <div class="grid-item" id="debut">
+                <h1>Mes réalisations</h1>
+            </div>
+            <div class="grid-item" id="arch">
+                <h1>A.R.C.H</h1>
+                <div class="img_container">
+                    <img class="img" src="../assets/realisation/arch.png">
+                </div>
+                <p>
+                    J'ai réalisé un 2<sup>ème</sup> jeu sur Roblox (déjà mentionné ci-dessus) se nommant "A.R.C.H" . 
+                    C'est un jeu autour d'un complexe de recherche similaire à Z.R.C mais avec une carte plus petite et plus détaillée. 
+                </p>
+                <a class="item-button" target="_self" href="arch.html">Plus d'informations</a>
+            </div>
+            <div class="grid-item" id="rgb">
+                <h1>RGB To Grayscale</h1>
+                <div class="img_container">
+                    <img class="img" src="../assets/realisation/rgb.png">
+                </div>
+                <p>
+                    J'ai réalisé un site web simple afin de tester le JavaScript : on saisit une couleur 
+                    et il nous donne l'équivalent en échelle de gris. <br>
+                    Cela revient à appliquer une saturation à 0% sur une image, mais pour une seule couleur.
+                </p> 
+                <a class="item-button" target="_blank" href="https://nilsmt.github.io/crash-test/RGB-Grayscale/">Vers le site web</a>
+            </div>
+            <div class="grid-item" id="ppp">
+                <h1>PPP</h1>
+                <div class="img_container">
+                    <img class="img" src="../assets/realisation/ppp.gif">
+                </div>
+                <p>
+                    Dans le cadre d'une matière à l'IUT nommée PPP (Projet Personnel et Professionnel), avec 2 de mes camarades, 
+                    nous avons réalisé une vidéo décalée sur un braquage.
+                </p>
+                <a class="item-button" target="_blank" href="https://youtu.be/fYBEQLzzFpE">Vers la vidéo</a>
+            </div>
+            <div class="grid-item" id="port">
+                <h1>Portfolio</h1>
+                <div class="img_container">
+                    <img class="img" src="../assets/realisation/pain.jpg">
+                </div>
+                <p>
+                    Eh oui ! Ce site web est réalisé à la main. Cela me permet d'utiliser mes connaissances en HTML et CSS 
+                    pour avoir un site web qui me correspond.
+                </p> 
+            </div>
+            <div class="grid-item" id="atlas">
+                <h1>Atlas</h1>
+                <div class="img_container">
+                    <img class="img" src="../assets/realisation/atlas.PNG">
+                </div>
+                <p>
+                    Dans le cadre d'une matière à l'IUT nommée Communication Professionnelle j'ai participé à la conception d'un site web. 
+                    Avec 3 de mes camarades.
+                    nous avons réalisé un site web ayant pour thème l'espace.
+                    J'étais en charge des illustrations ainsi que de la programmation du Paralax (l'arrière plan qui bouge grâce à la souris).
+                </p>
+                <a class="item-button" target="_blank" href="https://bastianmary.github.io/ATLAS/">Vers le site web</a>
+            </div>
+            <div class="grid-item" id="pastek">
+                <h1>Pastek</h1>
+                <div class="img_container">
+                    <img class="img" src="../assets/realisation/pastek.png">
+                </div>
+                <p>
+                    J'ai réalisé un jeu sur Scratch au collège. <br>                                                                                                                                                                                                                                                                                                                                                                                
+                    Son but est simple : récolter un maximum de pastèques avant qu'elles touchent le sol, 
+                    mais attention les pastèques violettes ne sont pas bonnes à prendre car elles sont avariées.
+                </p> 
+                <a class="item-button" target="_blank" href="https://scratch.mit.edu/projects/825278397/">Vers le jeu</a>
+            </div>
+            <div class="grid-item" id="fin">
+                <h1>Let's go page suivante</h1>
+                <a class="item-button" target="_self" href="avenir.html">Vers mon avenir</a>
+            </div>
+        </div>
+    </div>
     <footer id="myfooter"></footer>
     <script src="../js/color_palette.js"></script>
     <script src="../js/default.js"></script>

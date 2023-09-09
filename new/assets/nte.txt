@@ -1,0 +1,51 @@
+PRÉSENTATION
+    QUI SUIS-JE --> Présentation + Contact
+    PARCOURS PERSONNEL --> Pas besoin
+    PARCOURS SCOLAIRE --> Présentation
+    FORCES ET FAIBLESSES --> Présentation
+    PASSIONS --> Passions (le cube redirige vers la page)
+    IMPLICATION SOCIALE --> Présentation
+COMPÉTENCES
+    COMPÉTENCES INFORMATIQUES --> Compétences
+    COMPÉTENCES ARTISTIQUES --> Compétences
+RÉALISATIONS
+    ZENIUM RESEARCH CENTER --> Pas besoin (ya déjà arch qu'est pareil)
+    ARCH RESEARCH CENTRAL HUB --> Réalisations (le cube redirige vers la page)
+    ATLAS --> Réalisations
+    PPP --> Réalisations 
+    PORTFOLIO --> Réalisations
+    PASTEK --> Réalisations
+PROJET PROFESSIONNEL ET PERSONNEL
+    QUELS MÉTIERS ? --> Avenir
+    QUELLES ENTREPRISES ? --> Avenir
+    PROJET DE VIE --> Avenir
+
+
+
+
+
+
+--> Présentation
+--> Passions
+--> Compétences
+--> Réalisations
+--> Avenir
+--> Contact
+
+
+
+
+========================================
+========================================MENU PRINCIPALE
+========================================
+
+<div id="header-items">
+    <a class="header-item page-link" target="_self" href="../index.html">Accueil</a>
+    <a class="header-item page-link" target="_self" href="presentation.html">Présentation</a>
+    <a class="header-item page-link" target="_self" href="passions.html">Passions</a>
+    <a class="header-item page-link" target="_self" href="competences.html">Compétences</a>
+    <a class="header-item page-link" target="_self" href="realisations.html">Réalisations</a>
+    <a class="header-item page-link" target="_self" href="avenir.html">Avenir</a>
+    <a class="header-item page-link" target="_self" href="contact.html">Contact</a>
+    <a class="header-item page-link" target="_self" id="theme"><i id ="icon" class="fa-solid fa-moon"></i></a>
+</div>

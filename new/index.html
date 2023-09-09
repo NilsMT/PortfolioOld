@@ -10,40 +10,22 @@
     <script src="https://kit.fontawesome.com/a0107e3e1b.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NMT | Accueil</title>
 </head>
 <body>
     <div id="menu_container">
-        <div class="menu">
-            <a target="_self" href="html/presentation.html" class="menu-item" id="presentation">Présentation</a>
-            <a target="_self" href="html/passions.html" class="menu-item" id="passions">Passions</a>
-            <a target="_self" href="html/realisations.html" class="menu-item" id="réalisations">Réalisations</a>
-            <a target="_self" href="html/competences.html" class="menu-item" id="compétences">Compétences</a>
-            <a target="_self" href="html/avenir.html" class="menu-item" id="avenir">Avenir</a>
-            <a target="_self" href="html/contact.html" class="menu-item" id="contact">Contact</a>
+        <div class="menu content">
+            <a target="_self" href="html/presentation.html?light=false" class="menu-item page-link" id="presentation">Présentation</a>
+            <a target="_self" href="html/passions.html?light=false" class="menu-item page-link" id="passions">Passions</a>
+            <a target="_self" href="html/competences.html?light=false" class="menu-item page-link" id="compétences">Compétences</a>
+            <a target="_self" href="html/realisations.html?light=false" class="menu-item page-link" id="réalisations">Réalisations</a>
+            <a target="_self" href="html/avenir.html?light=false" class="menu-item page-link" id="avenir">Avenir</a>
+            <a target="_self" href="html/contact.html?light=false" class="menu-item page-link" id="contact">Contact</a>
             <div class="menu-item" id="theme"><i id ="icon" class="fa-solid fa-moon"></i></div>
         </div> 
     </div>
     <footer id="myfooter"></footer>
     <script src="js/color_palette.js"></script>
     <script src="js/default.js"></script>
-    <script>
-        const menuItems = document.querySelectorAll('.menu-item');
-
-        // Create an audio element and set its source to the "hover.wav" file
-        const audio = new Audio('assets/hover.mp3');
-        
-        // Add a mouseover event listener to each menu item
-        menuItems.forEach(item => {
-            item.addEventListener('mouseover', () => {
-                // Play the audio when hovered
-                audio.play();
-            });
-            item.addEventListener('mouseout', () => {
-                // Play the audio when hovered
-                audio.pause();
-            });
-        });
-    </script>
 </body>
 </html>

@@ -78,7 +78,13 @@ function variant() {
   
   document.body.style.setProperty('--accentdark',addHexColors(document.body.style.getPropertyValue('--accent'),inc,true))
   document.body.style.setProperty('--accentlight',addHexColors(document.body.style.getPropertyValue('--accent'),inc,false))
+
   document.body.style.setProperty('--texttrans',invertColor(document.body.style.getPropertyValue('--text'))+"55")
+  document.body.style.setProperty('--opptext',invertColor(document.body.style.getPropertyValue('--text')))
+
+  document.body.style.setProperty('--oppbg',invertColor(document.body.style.getPropertyValue('--bg')))
+  document.body.style.setProperty('--oppbglight',addHexColors(document.body.style.getPropertyValue('--oppbg'),inc,false))
+  document.body.style.setProperty('--oppbgdark',addHexColors(document.body.style.getPropertyValue('--oppbg'),inc,true))
 }
 /////////////////////////
 // DEFAULT PALETTE
@@ -96,43 +102,40 @@ document.body.style.setProperty('--accent',"#3734eb")
 ////////////////////////
 const queryParams = new URLSearchParams(window.location.search)
 
-const lightp = queryParams.get('light') === 'true';
+var lightp = queryParams.get('light') === 'true';
 if (lightp==false) {
     document.body.style.setProperty('--text',"#ffffff")
     document.body.style.setProperty('--bg',"#313131")
     document.body.style.setProperty('--texttrans',invertColor(document.body.style.getPropertyValue('--text'))+"55")
+    document.getElementById("icon").className = "fa-solid fa-moon"
 } else {
     document.body.style.setProperty('--text',"#000000")
     document.body.style.setProperty('--bg',"#d1d1d1")
     document.body.style.setProperty('--texttrans',invertColor(document.body.style.getPropertyValue('--text'))+"55")
+    document.getElementById("icon").className = "fa-solid fa-sun"
 }
+
+/*update page links*/
+const pageLinks = document.querySelectorAll('.page-link');
+pageLinks.forEach (link => {
+  const pagehref = link.getAttribute('href')
+  if (link.tagName =="A" & pagehref!=null) {
+    link.setAttribute('href',pagehref.split('?')[0]+"?light="+lightp.toString())
+  }
+});
 
 variant()
 /////////////////////////
 // CHECK THEME BUTTON
 ////////////////////////
 if (themeButton!=null) {
-  var light = false
   themeButton.addEventListener("click", function() {
-    if (document.body.style.getPropertyValue('--text')=='#000000') {
-      document.body.style.setProperty('--text',"#ffffff")
-      document.body.style.setProperty('--bg',"#313131")
-      document.getElementById("icon").className = "fa-solid fa-moon"
-      light = false
+    if (lightp == true) {
+      lightp = false
     } else {
-      document.body.style.setProperty('--text',"#000000")
-      document.body.style.setProperty('--bg',"#d1d1d1")
-      document.getElementById("icon").className = "fa-solid fa-sun"
-      light = true
+      lightp = true
     }
-    variant()
-    const menuItems = document.querySelectorAll('.menu-item');
-    // pass the theme in the URL
-    menuItems.forEach (item => {
-      if (item.tagName =="A") {
-        item.setAttribute('href',item.getAttribute('href').split('?')[0]+"?light="+light.toString())
-      }
-    });
-
+    window.location.href = window.location.href.split('?')[0]+"?light="+lightp.toString()
   });
 }
+
