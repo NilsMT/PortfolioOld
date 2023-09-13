@@ -146,6 +146,9 @@
         display: flex;
         flex-direction: column;
     }
+    .titre-section {
+        font-size: 200%;
+    }
 }
   
   /* Media query for tablets */
@@ -154,6 +157,9 @@
         display: flex;
         flex-direction: column;
         width: 90%;
+    }
+    .titre-section {
+        font-size: 250%;
     }
 }
 

@@ -37,18 +37,33 @@ headerlinks.forEach (headerlink => {
 
 //fade animation manager
 const contentElements = document.querySelector(".content");
-const fadeIn = contentElements.querySelectorAll("*");
+const targets = contentElements.querySelectorAll("*");
 
 observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-        if (entry.isIntersecting) {
+    if (entry.isIntersecting) {
       entry.target.classList.add("fadeIn");
-      entry.target.classList.remove("hidden");
+      entry.target.classList.remove("fadeOut");
+    } else {
+      entry.target.classList.add("fadeOut");
+      entry.target.classList.remove("fadeIn");
     }
   });
 });
 
-fadeIn.forEach(image => {
+targets.forEach(image => {
   observer.observe(image);
+});
+
+
+
+observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      entry.target.classList.add("fadeOut");
+    } else {
+      entry.target.classList.remove("fadeOut");
+    }
+  });
 });
 

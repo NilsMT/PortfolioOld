@@ -121,13 +121,25 @@ body::-webkit-scrollbar {
       transform:translate(0,0);
     }
 }
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        transform:translate(0,0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.7, 0.7);
+        transform: translateY(24px);
+    }
+}
   
 .fadeIn {
     animation: fade-in 0.5s cubic-bezier(0.64, 0, 0.78, 0);
 }
-  
-.hidden {
-    opacity: 0;
+
+.fadeOut {
+    animation: fade-out 0.5s cubic-bezier(0.64, 0, 0.78, 0);
 }
 
 /* Media query for smartphones */

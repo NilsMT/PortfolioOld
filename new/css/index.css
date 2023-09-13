@@ -123,19 +123,28 @@
       top: 0%;
     }
 }
-
 /* Media query for smartphones */
 @media (max-width: 480px) {
     .menu {
       width: 100%; /* Make the grid take up full width */
     }
     .menu-item {
-      font-size: 125%; /* Decrease font size for smartphones */
+      font-size: 100%; /* Decrease font size for smartphones */
+    }
+}
+  
+
+@media (min-width: 480px) {
+    .menu {
+      width: 100%; /* Make the grid take up full width */
+    }
+    .menu-item {
+      font-size: 100%; /* Decrease font size for smartphones */
     }
 }
   
 /* Media query for tablets */
-@media (max-width: 720px) {
+@media (min-width: 720px) {
     /* You can adjust these values to target specific tablet sizes */
     .menu {
       width: 85%; /* Adjust grid width for tablets */
@@ -147,9 +156,9 @@
 
 @media (min-width: 1440px) {
     .menu {
-      width: 40%; /* Reset grid width for larger screens (PCs) */
+        width: 40%; /* Reset grid width for larger screens (PCs) */
     }
     .menu-item {
-      font-size: 175%; /* Reset font size for larger screens (PCs) */
+        font-size: 175%; /* Reset font size for larger screens (PCs) */
     }
 }
