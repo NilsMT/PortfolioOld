@@ -1,0 +1,125 @@
+/*case*/
+.titre-section {
+    margin: auto;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    gap : 20px;
+    padding: 20px;
+    margin: auto;
+}
+
+.grid-item {
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+    gap : 10px;
+
+    padding: 20px;
+
+    margin: 0px;
+}
+
+/*additional elements*/
+
+.fleche {
+    font-size: 500%;
+}
+
+li {
+    text-align: left;
+}
+
+/*main color*/
+.grid-item:nth-child(3n+1) {
+    background-color: var(--primary);
+}
+.grid-item:nth-child(3n+2) {
+    background-color: var(--secondary);
+}
+.grid-item:nth-child(3n+3) {
+    background-color: var(--accent);
+}
+/*grid template*/
+/*identité*/
+#grid-identité {
+    grid : repeat(4,1fr) / repeat(2,1fr);
+}
+
+#photo {
+    grid-area: 1 / 1 / 5 / 1;
+}
+
+#nom {
+    grid-area: 1 / 2 / 1 / 2;
+}
+
+#age {
+    grid-area: 2 / 2 / 2 / 2;
+}
+
+#localisation {
+    grid-area: 3 / 2 / 3 / 2;
+}
+
+#cv {
+    grid-area: 4 / 2 / 4 / 2;
+}
+/*force et faiblesse*/
+#forces-et-faiblesses {
+    display: flex;
+    flex-direction: column;
+}
+
+#forces, #faiblesses {
+    height: fit-content;
+    width: fit-content;
+}
+/*implication sociale*/
+#implication-sociale {
+    grid : repeat(2,1fr) / repeat(2,1fr);
+}
+
+#bibli {
+    grid-area: 1 / 1 ;
+}
+
+#roblox {
+    grid-area: 1 / 2 ;
+}
+
+#starm {
+    grid-area: 2 / 1 ;
+}
+
+#disc {
+    grid-area: 2 / 2 ;
+}
+
+@media (max-width: 480px) {
+    .grid,.titre-section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+  
+  /* Media query for tablets */
+@media (max-width: 720px) {
+    .grid,.titre-section {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .grid,.titre-section {
+        width: 70%;
+    }
+}
