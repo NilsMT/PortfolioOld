@@ -1,8 +1,8 @@
 <html lang="en">
 <head>
     <link rel="icon" type="image/x-icon" href="assets//icon.png">
+    <link href="css/default.css" rel="stylesheet"/>
     <link href="css/index.css" rel="stylesheet"/>
-    <link href="css/accueil.css" rel="stylesheet"/>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +26,9 @@
     </div>
     <footer id="myfooter"></footer>
     <script src="js/color_palette.js"></script>
-    <script src="js/default.js"></script>
+    <script>
+        const target = document.getElementById("myfooter");
+        target.textContent = "Réalisé avec amour par Nils Moreau--Thomas | Copyright © " + (new Date().getFullYear()).toString() + " Tous droits réservés";
+    </script>
 </body>
 </html>

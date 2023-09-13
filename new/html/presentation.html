@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <link rel="icon" type="image/x-icon" href="../assets/icon.png">
-    <link href="../css/index.css" rel="stylesheet"/>
+    <link href="../css/default.css" rel="stylesheet"/>
     <link href="../css/presentation.css" rel="stylesheet"/>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,6 @@
         <div id="header-items">
             <a class="header-item page-link" target="_self" href="../index.html">Accueil</a>
             <a class="header-item" target="_self" id="theme"><i id ="icon" class="fa-solid fa-moon"></i></a>
-
             <a class="header-item" target="_self" href="#identité">Identité</a>
             <a class="header-item" target="_self" href="#parcours-scolaire">Parcours scolaire</a>
             <a class="header-item" target="_self" href="#forces-et-faiblesses">Forces et faiblesses</a>
@@ -33,8 +32,10 @@
             </div>
             <p class="grid-item" id="nom">Je m'appelle Nils Moreau--Thomas</p>
             <p class="grid-item" id="age">J'ai actuellement 00 ans</p>
-            <p class="grid-item" id="localisation">J'habite actuellement à Treillières en Loire-Atlantique</p>
-            <a class="grid-item" id="cv" href="../assets/CV">Mon CV <i class="fa-solid fa-file"></i></a>
+            <p class="grid-item" id="localisation">J'habite actuellement à Treillières, <br> en Loire-Atlantique</p>
+            <div class="grid-item" id="cv">
+                <a class="item-button page-link" href="../assets/présentation/Nils_Moreau--Thomas_CV.pdf">Mon Curriculum Vitae</a>
+            </div>
         </div>
         <h1 class="titre-section" id="parcours-scolaire">Parcours scolaire</h1>
         <div class="grid">
@@ -80,7 +81,7 @@
             </div>
         </div>
         <h1 class="titre-section" id="forces-et-faiblesses">Forces et faiblesses</h1>
-        <div class="grid">
+        <div class="grid" id="grid-force-faible">
             <ul class="grid-item" id="forces">
                 <li data-icon="▶ ">Rigoureux</li>
                 <li data-icon="▶ ">Organisé</li>
@@ -94,7 +95,7 @@
             </ul>
         </div>
         <h1 class="titre-section" id="implication-sociale">Implication sociale</h1>
-        <div class="grid">
+        <div class="grid" id="grid-impli-sociale">
             <p class="grid-item" id="bibli">
                 ☛ Depuis 5 ans je suis bénévole pour des animations de jeux vidéos à la médiathèque de Treillières : 
                 j'aide pour l'organisation logistique et l'encadrement des joueurs. 
@@ -113,6 +114,7 @@
     <footer id="myfooter"></footer>
     <script src="../js/color_palette.js"></script>
     <script src="../js/default.js"></script>
+    <!--L'age automatique parce flemme d'update-->
     <script>
         const dateActuelle = new Date();
 

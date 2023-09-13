@@ -1,0 +1,166 @@
+/*border debug*/
+e {
+    border: solid rgb(255, 0, 0) 1px;
+}
+/*styling elements*/
+* {
+    font-family: 'ADLaM Display', cursive;
+    color: var(--text);
+
+    word-break: break-word;
+
+    text-shadow: 0px 2px var(--texttrans);
+    scroll-behavior: smooth;
+
+    text-align: center;
+}
+
+p{
+    text-align: left;
+}
+a,#theme{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 0px;
+    margin: 0px;
+
+    background: repeating-linear-gradient(
+    -45deg,
+    var(--bg),
+    var(--bg) 30px,
+    var(--bgdark) 40px, 
+    var(--bgdark) 20px);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+/*contenu de la page*/
+.content {
+    padding-top: 2%;
+}
+
+/*mention+menu*/
+#header-items,#collapse-header,#myfooter {
+    background : var(--banner);
+}
+/*mention*/
+#myfooter {
+    padding: 10px;
+    text-align: center;
+    z-index: 100;
+}
+/*menu*/
+#myheader {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+#collapse-header {
+    margin-top: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 0px 20px 20px 0px; 
+}
+
+#header-items {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: left;
+    row-gap: 10px;
+    column-gap: 30px;
+}
+
+/*page links*/
+.header-item,
+.header-item>#icon  {
+    color: var(--text);
+    transition: transform 0.2s ease, box-shadow 0.2s ease,background-color 0.2s ease;
+}
+
+.header-item:hover,
+.header-item:hover>#icon  {
+    transform: translateY(-2px);
+    text-shadow: 0px 0px 20px var(--text);
+}
+
+/*img*/
+.img {
+    max-width: 100%;
+    border-radius: 10px;
+    justify-self: center;
+    box-shadow: 0px 3px var(--texttrans);
+}
+.img_container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-flow: row;
+}
+
+/*animation fade*/
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.7, 0.7);
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform:translate(0,0);
+    }
+}
+  
+.fadeIn {
+    animation: fade-in 0.5s cubic-bezier(0.64, 0, 0.78, 0);
+}
+  
+.hidden {
+    opacity: 0;
+}
+
+/* Media query for smartphones */
+@media (max-width: 480px) {
+    footer,.header-items {
+        font-size:200%;
+        flex-direction: column;
+    }
+    .header-item {
+        width: 100%;
+    }
+    a,p,li  {
+        font-size:200%;
+    }
+}
+  
+  /* Media query for tablets */
+@media (max-width: 720px) {
+    footer,.header-items {
+        font-size:150%;
+        flex-direction: row;
+    }
+    a,p,li  {
+        font-size:150%;
+    }
+}
+
+@media (min-width: 1440px) {
+    footer,.header-items {
+        font-size:150%;
+        flex-direction: row;
+    }
+    a,p,li {
+        font-size:150%;
+    }
+}
