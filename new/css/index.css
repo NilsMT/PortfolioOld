@@ -123,7 +123,6 @@
       top: 0%;
     }
 }
-/* Media query for smartphones */
 @media (max-width: 480px) {
     .menu {
       width: 100%; /* Make the grid take up full width */
@@ -132,14 +131,13 @@
       font-size: 100%; /* Decrease font size for smartphones */
     }
 }
-  
-
+/* Media query for smartphones */
 @media (min-width: 480px) {
     .menu {
       width: 100%; /* Make the grid take up full width */
     }
     .menu-item {
-      font-size: 100%; /* Decrease font size for smartphones */
+      font-size: 125%; /* Decrease font size for smartphones */
     }
 }
   
@@ -153,12 +151,22 @@
         font-size: 150%; /* Reset font size for larger screens (PCs) */
     }
 }
+  
+/* Media query for larger screens (PCs, laptops, etc.) */
+@media (min-width: 1024px) {
+    .menu {
+      width: 60%; /* Reset grid width for larger screens (PCs) */
+    }
+    .menu-item {
+      font-size: 150%; /* Reset font size for larger screens (PCs) */
+    }
+}
 
 @media (min-width: 1440px) {
     .menu {
-        width: 40%; /* Reset grid width for larger screens (PCs) */
+      width: 40%; /* Reset grid width for larger screens (PCs) */
     }
     .menu-item {
-        font-size: 175%; /* Reset font size for larger screens (PCs) */
+      font-size: 175%; /* Reset font size for larger screens (PCs) */
     }
 }
