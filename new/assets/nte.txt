@@ -63,49 +63,5 @@ PROJET PROFESSIONNEL ET PERSONNEL
 
 
 ========================================
-========================================PARCOURS SCOLAIRE
+========================================ARCH
 ========================================
-    <div class="flex" id="parcours-scolaire">
-        <div class="flex-item">
-            <div class="img_container">
-                <img class="img" src="../assets/présentation/joffre.jpg">
-            </div>
-            <h1>IUT de Joffre</h1>
-            <p>44 Nantes</p>
-            <ul>
-                <li>BUT Informatique, actuellement en 2<sup>ème</sup> année (Parcours Conception, Développement et Validation d'Applications). </li>
-            </ul>
-        </div>
-        <h1 class="fleche"gros>▲</h1>
-        <div class="flex-item">
-            <div class="img_container">
-                <img class="img" src="../assets/présentation/st-felix.jpg">
-            </div>
-            <h1>Lycée Saint Félix La Salle</h1>
-            <p>44 Nantes</p>
-            <ul>
-                <li>Option Classe Anglophone en 2<sup>nde</sup></li>
-                <li>BAC Technologique STI2D, Option Système d'Information et Numérique</li>
-            </ul>
-        </div>
-        <h1 class="fleche"gros>▲</h1>
-        <div class="flex-item">
-            <div class="img_container">
-                <img class="img" src="../assets/présentation/helder-camara.jpg">
-            </div>
-            <h1>Collège Helder Camara</h1>
-            <p>44 Treillières</p>
-            <ul>
-                <li>Option Section Européenne en 3<sup>ème</sup</li>
-            </ul>
-        </div>
-        <h1 class="fleche"gros>▲</h1>
-        <div class="flex-item">
-            <div class="img_container">
-                <img class="img" src="../assets/présentation/st-therese.jpg">
-            </div>
-            <h1>École primaire Sainte Thérèse</h1>
-            <p>44 Treillières</p>
-        </div>
-    </div>
-    
