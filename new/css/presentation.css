@@ -9,36 +9,31 @@
 /*grid template*/
 /*identité*/
 #grid-identité {
-    grid : repeat(4,1fr) / repeat(2,1fr);
+    grid : 1fr / 1fr 1fr;
 }
 
 #photo {
-    grid-area: 1 / 1 / 5 / 1;
+    grid-area: 1 / 1;
 }
 
-#nom {
-    grid-area: 1 / 2 / 1 / 2;
+#info {
+    grid-area: 1 / 2;
 }
 
-#age {
-    grid-area: 2 / 2 / 2 / 2;
-}
-
-#localisation {
-    grid-area: 3 / 2 / 3 / 2;
-}
-
-#cv {
-    grid-area: 4 / 2 / 4 / 2;
+#info ul {
+    list-style-type: none;
 }
 /*force et faiblesse*/
 #grid-force-faible {
-    grid-area: auto / 1fr 1fr;
+    grid-area: 1fr / 1fr 1fr;
 }
 
-#forces, #faiblesses {
+#forces>ul, #faiblesses>ul {
     height: fit-content;
+    align-items: normal;
+    align-self: center;
 }
+
 #force {
     grid-area: 1/1;
 }
@@ -56,18 +51,17 @@
     grid-area: 1 / 1 ;
     height: fit-content;
 }
-
-#roblox {
+#disc {
     grid-area: 1 / 2 ;
     height: fit-content;
 }
 
-#starm {
+#roblox {
     grid-area: 2 / 1 ;
     height: fit-content;
 }
 
-#disc {
+#starm {
     grid-area: 2 / 2 ;
     height: fit-content;
 }

@@ -55,15 +55,3 @@ targets.forEach(image => {
   observer.observe(image);
 });
 
-
-
-observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      entry.target.classList.add("fadeOut");
-    } else {
-      entry.target.classList.remove("fadeOut");
-    }
-  });
-});
-

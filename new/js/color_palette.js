@@ -115,7 +115,7 @@ if (lightp==false) {
     document.body.style.setProperty('--text',"#000000")
     document.body.style.setProperty('--bg',"#d1d1d1")
     document.body.style.setProperty('--texttrans',invertColor(document.body.style.getPropertyValue('--text'))+"55")
-    document.getElementById("icon").className = "fa-solid fa-sun"
+    document.getElementById("icon").className = "fa-regular fa-sun"
 }
 
 /*update page links*/

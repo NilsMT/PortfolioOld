@@ -1,5 +1,6 @@
 .grid {
-    grid : repeat(7,auto) / repeat(2,auto);
+    grid : repeat(3,auto) / repeat(2,1fr);
+    align-items: center;
 }
 
 .grid-item {
@@ -7,37 +8,32 @@
     margin: 0px;
 }
 /*button color*/
-#debut {
-    grid-area: 1 / 2 / 2 / 2;
+
+#flick {
+    grid-area: 1 / 1;
 }
 
 #arch {
-    grid-area: 1 / 1 / 3 / 1;
+    grid-area: 1 / 2;
 }
 
 #rgb {
-    grid-area: 2 / 2 / 4 / 2;
-}
-
-#pastek {
-    grid-area: 3 / 1 / 5 / 1;
+    grid-area: 2 / 1;
 }
 
 #port {
-    grid-area: 4 / 2 / 6 / 2;
+    grid-area: 2 / 2;
 }
 
 #atlas {
-    grid-area: 5 / 1 / 7 / 1;
+    grid-area: 3 / 1;
 }
 
-#ppp {
-    grid-area: 6 / 2 / 8 / 2;
+#pastek {
+    grid-area: 3 / 2;
 }
 
-#fin {
-    grid-area: 7 / 1 / 8 / 1;
-}
+
 /* Media query for smartphones */
 @media (max-width: 480px) {
     .grid {
