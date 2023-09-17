@@ -10,6 +10,9 @@
 
 .content {
     padding: 0%;
+    top: -100%;
+    position: relative;
+    animation: moveBackground 1s forwards;
 }
 /*grille*/
 .menu {

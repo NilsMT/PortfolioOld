@@ -146,11 +146,11 @@ a,#theme {
 }
 
 #header-items {
+    text-align: left;
     padding: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     align-items: left;
     row-gap: 10px;
     column-gap: 30px;
