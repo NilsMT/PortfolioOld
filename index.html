@@ -22,13 +22,46 @@
             <a target="_self" href="html/realisations.html?light=false" class="menu-item page-link" id="réalisations">Mes<br> réalisations</a>
             <a target="_self" href="html/avenir.html?light=false" class="menu-item page-link" id="avenir">Mon avenir</a>
             <div class="menu-item" id="theme"><i id ="icon" class="fa-solid fa-moon"></i></div>
+            <div class="menu-item" id="contact">Contact</div>
         </div> 
+        <div class="content" id="contact-info">
+            <p id="collapse-contact-info">Fermer ✖</p>
+            <p><i class="fa-solid fa-envelope"></i> nilsmoreauthomas@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> +33 07 69 43 76 38</p>
+        </div>
     </div>
     <footer id="myfooter"></footer>
     <script src="js/color_palette.js"></script>
     <script>
         const target = document.getElementById("myfooter");
         target.textContent = "Réalisé avec amour par Nils Moreau--Thomas | Copyright © " + (new Date().getFullYear()).toString() + " Tous droits réservés";
+        //contact
+        const cont = document.getElementById("contact");
+        const closecont = document.getElementById("collapse-contact-info");
+        const contactinf = document.getElementById("contact-info")
+        
+        var click=false
+        cont.addEventListener("click", function () {
+        console.warn("clicked");
+            click= !click
+            // Toggle the visibility of hitboxes
+            if (click==true) {
+                contactinf.style.display = "flex"
+            } else {
+                contactinf.style.display = "none"
+            }
+        });
+
+        closecont.addEventListener("click", function () {
+        console.warn("clicked");
+            click= !click
+            // Toggle the visibility of hitboxes
+            if (click==true) {
+                contactinf.style.display = "flex"
+            } else {
+                contactinf.style.display = "none"
+            }
+        });
         //option dev
         const footer = document.getElementById("myfooter");
         const hitboxes = document.querySelectorAll("*");

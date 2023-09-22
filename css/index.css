@@ -26,15 +26,14 @@
     margin-left: auto;
     margin-right: auto;
 
-    grid-template: 
-        "ti ti ti ti ti ti ti"
-        ". pr pr pr pr . ."
-        ". . c c c r r"
-        "pa pa c c c r r"
-        "pa pa c c c . ."
-        ". . a a a a ."
-        ". th th th . . ."
-    ;
+    grid-template:  
+    ". ti ti ti ti ti ."
+    ". pr pr pr pr . ."
+    ". . c c c r r"
+    "pa pa c c c r r"
+    "pa pa c c c . ."
+    ". . a a a a ."
+    ". th th th ct ct ct";
 }
 
 .menu-item {
@@ -119,7 +118,43 @@
     grid-area: ti;
 }
 
+#contact {
+    grid-area: ct;
 
+    cursor: pointer;
+    background-color: var(--primary);
+}
+
+#contact:hover {
+    background-color: var(--primarylight);
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px var(--primarylight);
+}
+
+/*contact pop up*/
+#collapse-contact-info {
+    cursor: pointer;
+}
+
+#contact-info {
+    background : var(--banner);
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-info * {
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+}
 
 @keyframes moveBackground {
     0% {
@@ -161,18 +196,18 @@
 /* Media query for larger screens (PCs, laptops, etc.) */
 @media (min-width: 1024px) {
     .menu {
-      width: 60%; /* Reset grid width for larger screens (PCs) */
+        width: 60%; /* Reset grid width for larger screens (PCs) */
     }
     .menu-item {
-      font-size: 150%; /* Reset font size for larger screens (PCs) */
+        font-size: 150%; /* Reset font size for larger screens (PCs) */
     }
 }
 
 @media (min-width: 1440px) {
     .menu {
-      width: 40%; /* Reset grid width for larger screens (PCs) */
+        width: 40%; /* Reset grid width for larger screens (PCs) */
     }
     .menu-item {
-      font-size: 175%; /* Reset font size for larger screens (PCs) */
+        font-size: 175%; /* Reset font size for larger screens (PCs) */
     }
 }
