@@ -1,0 +1,21 @@
+@media (max-width: 480px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+  
+  /* Media query for tablets */
+@media (max-width: 720px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .grid {
+        width: 70%;
+    }
+}

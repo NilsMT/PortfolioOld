@@ -57,13 +57,14 @@ body::-webkit-scrollbar {
     margin: 0px;
 }
 
-.grid-item:nth-child(3n+1) {
+* .grid-item:nth-child(3n+1) {
     background-color: var(--primary);
 }
-.grid-item:nth-child(3n+2) {
+* .grid-item:nth-child(3n+2) {
     background-color: var(--secondary);
 }
-.grid-item:nth-child(3n+3) {
+
+* .grid-item:nth-child(3n+3) {
     background-color: var(--accent);
 }
 
@@ -123,6 +124,7 @@ a,#theme {
 #header-items,#collapse-header,#myfooter {
     background : var(--banner);
     z-index: 100;
+    backdrop-filter: blur(5px);
 }
 /*mention*/
 #myfooter {
@@ -182,6 +184,12 @@ a,#theme {
     grid-auto-flow: row;
 }
 
+
+/*Bouton retour accueil*/
+.fin {
+    display: flex;
+    justify-content: center;
+}
 /*animation fade*/
 @keyframes fade-in {
     from {

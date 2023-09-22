@@ -55,3 +55,22 @@ targets.forEach(image => {
   observer.observe(image);
 });
 
+//option dev
+const footer = document.getElementById("myfooter");
+const hitboxes = document.querySelectorAll("*");
+var click=false
+footer.addEventListener("click", function () {
+  console.warn("clicked");
+    click= !click
+    // Toggle the visibility of hitboxes
+    hitboxes.forEach(hitbox => {
+        if (click==true) {
+            hitbox.style.border = "1px solid #00ff00";
+        } else {
+            hitbox.style.border = "";
+        }
+    });
+});
+
+
+

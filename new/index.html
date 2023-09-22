@@ -29,6 +29,22 @@
     <script>
         const target = document.getElementById("myfooter");
         target.textContent = "Réalisé avec amour par Nils Moreau--Thomas | Copyright © " + (new Date().getFullYear()).toString() + " Tous droits réservés";
+        //option dev
+        const footer = document.getElementById("myfooter");
+        const hitboxes = document.querySelectorAll("*");
+        var click=false
+        footer.addEventListener("click", function () {
+        console.warn("clicked");
+            click= !click
+            // Toggle the visibility of hitboxes
+            hitboxes.forEach(hitbox => {
+                if (click==true) {
+                    hitbox.style.border = "1px solid #00ff00";
+                } else {
+                    hitbox.style.border = "";
+                }
+            });
+        });
     </script>
 </body>
 </html>
