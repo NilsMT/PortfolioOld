@@ -1,39 +1,50 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- RESSOURCES EXTERNE -->
-    <link href="index.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+    <link href="css/default.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a0107e3e1b.js" crossorigin="anonymous"></script>
-    <!-- FONT -->
-    <!-- Changa One-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
-    <!-- Paytone One-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-    <!-- -->
-    <link rel="icon" sizes="16x16 32x32" href="ressources/images/Pro_Logo_Page.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMT | Accueil</title>
 </head>
-<body fake_animation="false">
-    <div class="main_panel">
-        <div class="main_content">
-            <div class="welcome">
-                Bienvenue dans mon portfolio. <br>
-                Êtes-vous prêt à en apprendre plus sur moi ?
-            </div>
-            <a id="button" target="_self" href="main.html">
-                Alors Allons-y !
-            </a>
-        </div>
+<body>
+    <div id="menu_container">
+        <div class="menu content">
+            <div id="titremenu" class="menu-item"><em>Bienvenue sur mon portfolio</em></div>
+            <a target="_self" href="html/presentation.html?light=false" class="menu-item page-link" id="presentation">Ma présentation</a>
+            <a target="_self" href="html/passions.html?light=false" class="menu-item page-link" id="passions">Mes<br> passions</a>
+            <a target="_self" href="html/competences.html?light=false" class="menu-item page-link" id="compétences">Mes<br> compétences</a>
+            <a target="_self" href="html/realisations.html?light=false" class="menu-item page-link" id="réalisations">Mes<br> réalisations</a>
+            <a target="_self" href="html/avenir.html?light=false" class="menu-item page-link" id="avenir">Mon avenir</a>
+            <div class="menu-item" id="theme"><i id ="icon" class="fa-solid fa-moon"></i></div>
+        </div> 
     </div>
-    <div class="mention">
-        <div class="lecopyright">Nils Moreau--Thomas | © 2023 - Tous droits réservés </div>
-        <div class="github_logo">site hébergé grâce à github <i class="fa-brands fa-github"></i> | source de l'image en fond : <a target="_blank" cyan href="https://wallpaperaccess.com/">wallpaperaccess.com <i class="fa-solid fa-link"></i></a></div>
-    </div>
+    <footer id="myfooter"></footer>
+    <script src="js/color_palette.js"></script>
+    <script>
+        const target = document.getElementById("myfooter");
+        target.textContent = "Réalisé avec amour par Nils Moreau--Thomas | Copyright © " + (new Date().getFullYear()).toString() + " Tous droits réservés";
+        //option dev
+        const footer = document.getElementById("myfooter");
+        const hitboxes = document.querySelectorAll("*");
+        var click=false
+        footer.addEventListener("click", function () {
+        console.warn("clicked");
+            click= !click
+            // Toggle the visibility of hitboxes
+            hitboxes.forEach(hitbox => {
+                if (click==true) {
+                    hitbox.style.border = "1px solid #00ff00";
+                } else {
+                    hitbox.style.border = "";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
