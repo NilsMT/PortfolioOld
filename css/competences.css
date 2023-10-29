@@ -46,6 +46,23 @@
 .flex-item>div {
     width: auto;
 }
+
+#mention_logo>* {
+    text-align: center;
+    font-size: smaller;
+}
+
+#mention_logo a {
+    color: var(--primary);
+    font-size: small;
+
+    transition: text-shadow 0.2s ease, color 0.2s ease;
+}
+
+#mention_logo a:hover {
+    color: var(--primarylight);
+    text-shadow: 0px 0px 20px var(--primarylight);
+}
   
   /* Media query for tablets */
 @media (max-width: 480px) {

@@ -138,7 +138,37 @@ if (themeButton!=null) {
     } else {
       lightp = true
     }
+    themereload=true;
     window.location.href = window.location.href.split('?')[0]+"?light="+lightp.toString()
   });
 }
 
+/////////////////////////
+// SAVE SCROLL POSITION
+////////////////////////
+const accueilButtons = document.querySelectorAll('.page-link');
+var gohome = false;
+// reset le scroll si on clique sur accueil
+accueilButtons.forEach(function (button) {
+  if (button.textContent.includes('Accueil')) {
+    button.addEventListener('click', function () {
+      gohome = true
+    });
+  }
+});
+
+// scroll a la position sauvegardée
+document.addEventListener("DOMContentLoaded", function(event) { 
+  var scrollpos = localStorage.getItem('scrollpos');
+  if (scrollpos!=0) window.scrollTo(0, scrollpos);
+});
+
+// sauvegarde la position de scroll
+window.onbeforeunload = function(e) {
+  if (gohome==true) {
+    gohome=false;
+    localStorage.setItem('scrollpos', 0)
+  } else {
+    localStorage.setItem('scrollpos', window.scrollY);
+  };
+};

@@ -3,9 +3,9 @@ target.textContent = "Réalisé avec amour par Nils Moreau--Thomas | Copyright �
 
 const headerItems = document.getElementById('header-items');
 const collapseHeader = document.getElementById('collapse-header');
-
 //regarde si ya un theme déjà appliqué dans le lien sinon il en applique un
 if (window.location.href.split('?')[1]==null) {
+    themereload = true;
     window.location.href=window.location.href+"?light=false"
 }
 
@@ -62,7 +62,7 @@ var click=false
 footer.addEventListener("click", function () {
   console.warn("clicked");
     click= !click
-    // Toggle the visibility of hitboxes
+    //affiche les hitbox ou non
     hitboxes.forEach(hitbox => {
         if (click==true) {
             hitbox.style.border = "1px solid #00ff00";
@@ -71,6 +71,3 @@ footer.addEventListener("click", function () {
         }
     });
 });
-
-
-
