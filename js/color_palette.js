@@ -146,11 +146,11 @@ if (themeButton!=null) {
 /////////////////////////
 // SAVE SCROLL POSITION
 ////////////////////////
-const accueilButtons = document.querySelectorAll('.page-link');
+const accueilButtons = document.querySelectorAll('a');
 var gohome = false;
 // reset le scroll si on clique sur accueil
 accueilButtons.forEach(function (button) {
-  if (button.textContent.includes('Accueil')) {
+  if (button.textContent=='Accueil' || button.textContent=='Retour à l\'accueil') {
     button.addEventListener('click', function () {
       gohome = true
     });
