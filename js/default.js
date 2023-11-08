@@ -3,11 +3,6 @@ target.textContent = "Réalisé avec amour par Nils Moreau--Thomas | Copyright �
 
 const headerItems = document.getElementById('header-items');
 const collapseHeader = document.getElementById('collapse-header');
-//regarde si ya un theme déjà appliqué dans le lien sinon il en applique un
-if (window.location.href.split('?')[1]==null) {
-    themereload = true;
-    window.location.href=window.location.href+"?light=false"
-}
 
 //le collapse par défault
 collapseHeader.textContent = 'Menu ▼';

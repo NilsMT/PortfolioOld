@@ -33,6 +33,10 @@
     <footer id="myfooter"></footer>
     <script src="js/color_palette.js"></script>
     <script>
+        const isLightCookie = document.cookie.split(';').map(cookie => cookie.trim().split('=')).find(([name]) => name === "isLight");
+
+        isLightCookie ? isLightCookie[1] === "true" : false;
+
         const target = document.getElementById("myfooter");
         target.textContent = "Réalisé avec amour par Nils Moreau--Thomas | Copyright © " + (new Date().getFullYear()).toString() + " Tous droits réservés";
         //contact

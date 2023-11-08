@@ -13,6 +13,7 @@ e {
     scroll-behavior: smooth;
 
     text-align: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 body {
