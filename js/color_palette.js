@@ -107,12 +107,42 @@ const themeButton = document.getElementById("theme");
 if (themeButton!=null) {
   themeButton.addEventListener("click", function() {
     if (getCookie("isLight") === 'true') {
-      document.cookie = "isLight=false; expires=Thu, 01 Jan 2025 00:00:00 UTC; path=/";
+      setCookie('isLight',"false");
     } else {
-      document.cookie = "isLight=true; expires=Thu, 01 Jan 2025 00:00:00 UTC; path=/";
+      setCookie('isLight',"true");
     }
     checkforthemetoload();
   });
+}
+
+
+
+function setCookie(name, value) {
+  // Check if cookie with the same name already exists
+  var existingCookie = getCookie(name);
+  if (existingCookie !== "") {
+      // If cookie with the same name exists, remove it first
+      document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  }
+  
+  var date = new Date();
+  date.setFullYear(date.getFullYear() + 1); // Add one year to the current year
+  date.setHours(23, 59, 59, 0); // Set time to midnight of the last day of the next year
+  var expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+  var cookieName = name + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var cookieArray = decodedCookie.split(';');
+  for (var i = 0; i < cookieArray.length; i++) {
+      var cookie = cookieArray[i].trim();
+      if (cookie.indexOf(cookieName) === 0) {
+          return cookie.substring(cookieName.length, cookie.length);
+      }
+  }
+  return "";
 }
 /////////////////////////
 // DEFAULT BEHAVIOR
