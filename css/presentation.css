@@ -6,18 +6,29 @@
 #cv>a {
     width: 75%;
 }
+
+#photo > img {
+    object-fit: contain;
+    display: flex;
+}
+
 /*grid template*/
 /*identité*/
 #grid-identité {
-    grid : 1fr / 1fr 1fr;
+    display: flex;
+    flex-direction: row;
 }
 
 #photo {
-    grid-area: 1 / 1;
+    height: auto;
+    width: 50%
 }
 
 #info {
-    grid-area: 1 / 2;
+    height: fit-content;
+    width: max-content;
+    word-break: keep-all;
+    white-space-collapse: preserve-spaces;
 }
 
 #info ul {
