@@ -1,39 +1,88 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- RESSOURCES EXTERNE -->
-    <link href="index.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="assets/icon.png">
+    <link href="css/default.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&amp;display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a0107e3e1b.js" crossorigin="anonymous"></script>
-    <!-- FONT -->
-    <!-- Changa One-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
-    <!-- Paytone One-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-    <!-- -->
-    <link rel="icon" sizes="16x16 32x32" href="ressources/images/Pro_Logo_Page.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>NMT | Accueil</title>
 </head>
-<body fake_animation="false">
-    <div class="main_panel">
-        <div class="main_content">
-            <div class="welcome">
-                Bienvenue dans mon portfolio. <br>
-                Êtes-vous prêt à en apprendre plus sur moi ?
-            </div>
-            <a id="button" target="_self" href="main.html">
-                Alors Allons-y !
-            </a>
+<body>
+    <div id="menu_container">
+        <div class="menu content">
+            <div id="titremenu" class="menu-item"><em>Bienvenue sur mon portfolio</em></div>
+            <a target="_self" href="html/presentation.html?light=false" class="menu-item page-link" id="presentation">Ma présentation</a>
+            <a target="_self" href="html/passions.html?light=false" class="menu-item page-link" id="passions">Mes<br> passions</a>
+            <a target="_self" href="html/competences.html?light=false" class="menu-item page-link" id="compétences">Mes<br> compétences</a>
+            <a target="_self" href="html/realisations.html?light=false" class="menu-item page-link" id="réalisations">Mes<br> réalisations</a>
+            <a target="_self" href="html/avenir.html?light=false" class="menu-item page-link" id="avenir">Mon avenir</a>
+            <div class="menu-item" id="theme"><i id ="icon" class="fa-solid fa-moon"></i></div>
+            <div class="menu-item" id="contact">Contact</div>
+        </div> 
+        <div class="content" id="contact-info">
+            <p id="collapse-contact-info">Fermer ✖</p>
+            <a href="mailto:nilsmoreauthomas@gmail.com"><i class="fa-solid fa-envelope"></i> nilsmoreauthomas@gmail.com</a>
+            <a href="tel:+33769437638"><i class="fa-solid fa-phone"></i> +33 (0)7 69 43 76 38</a>
         </div>
     </div>
-    <div class="mention">
-        <div class="lecopyright">Nils Moreau--Thomas | © 2023 - Tous droits réservés </div>
-        <div class="github_logo">site hébergé grâce à github <i class="fa-brands fa-github"></i> | source de l'image en fond : <a target="_blank" cyan href="https://wallpaperaccess.com/">wallpaperaccess.com <i class="fa-solid fa-link"></i></a></div>
-    </div>
+    <footer id="myfooter"></footer>
+    <script src="js/color_palette.js"></script>
+    <script>
+        const isLightCookie = document.cookie.split(';').map(cookie => cookie.trim().split('=')).find(([name]) => name === "isLight");
+
+        isLightCookie ? isLightCookie[1] === "true" : false;
+
+        const target = document.getElementById("myfooter");
+        target.textContent = "Réalisé avec amour par Nils Moreau--Thomas | Copyright © " + (new Date().getFullYear()).toString() + " Tous droits réservés";
+        //contact
+        const cont = document.getElementById("contact");
+        const closecont = document.getElementById("collapse-contact-info");
+        const contactinf = document.getElementById("contact-info")
+        
+        var click=false
+        cont.addEventListener("click", function () {
+        console.warn("clicked");
+            click= !click
+            // Toggle the visibility of hitboxes
+            if (click==true) {
+                contactinf.style.display = "flex"
+            } else {
+                contactinf.style.display = "none"
+            }
+        });
+
+        closecont.addEventListener("click", function () {
+        console.warn("clicked");
+            click= !click
+            // Toggle the visibility of hitboxes
+            if (click==true) {
+                contactinf.style.display = "flex"
+            } else {
+                contactinf.style.display = "none"
+            }
+        });
+        //option dev
+        const footer = document.getElementById("myfooter");
+        const hitboxes = document.querySelectorAll("*");
+        var click=false
+        footer.addEventListener("click", function () {
+        console.warn("clicked");
+            click= !click
+            // Toggle the visibility of hitboxes
+            hitboxes.forEach(hitbox => {
+                if (click==true) {
+                    hitbox.style.border = "1px solid #00ff00";
+                } else {
+                    hitbox.style.border = "";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
